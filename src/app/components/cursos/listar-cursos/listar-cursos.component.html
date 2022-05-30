@@ -1,0 +1,12 @@
+<div class="card mt-5" style="width: 18rem;">
+  <img [src]="foto" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{nome | uppercase}}</h5>
+    <p class="card-text">{{descricao | uppercase}}</p>
+    <p *ngIf="promocao" > <span class="badge badge-success">Promoçao</span> </p>
+    <p> <span class="badge badge-success">{{data | date}}</span> </p>
+    <p> <span class="badge badge-warning">{{id | number: '2.0-0'}}</span> </p>
+    <a href="#" class="btn btn-primary float-right">{{preco | currency : 'BRL' }}</a>
+    <a class="btn btn-primary float-left" (click)="clicar()">Clique aqui</a>
+  </div>
+</div>
